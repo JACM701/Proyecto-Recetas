@@ -1,0 +1,1040 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #fbd3e9;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.header-content {
+  padding: 50px 0;
+}
+
+.header-content h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.header-content p {
+  font-size: 18px;
+  color: #666;
+}
+
+.header-content .button {
+  background-color: #ffeb3b;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Estilos para el contenido principal */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para recetas favoritas en modo cuadrícula horizontal */
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajusta las columnas para que se ajusten automáticamente */
+  gap: 20px; /* Espacio entre las tarjetas de recetas */
+  justify-content: center; /* Centra el contenido dentro de la cuadrícula */
+  overflow-x: auto; /* Permite el desplazamiento horizontal si hay muchas tarjetas */
+  white-space: nowrap; /* Evita el ajuste de línea dentro del contenedor */
+}
+
+/* Estilos para cada tarjeta de receta */
+.recipe {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block; /* Asegura que las tarjetas se muestren en línea */
+  width: 200px;
+}
+
+.recipe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.recipe-name {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recipe-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre los botones */
+  margin-top: 10px; /* Espacio superior para los botones */
+}
+
+/* styles.css */
+.message {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.view-more-button {
+  background-color: #ffeb3b; /* Color de fondo amarillo */
+  color: #333; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+  font-size: 16px; /* Tamaño de la fuente */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  text-decoration: none; /* Asegurarse de que no haya subrayado */
+}
+
+.view-more-button:hover {
+  background-color: #fdd835; /* Color de fondo amarillo más oscuro al pasar el cursor */
+}
+
+.view-more-button:focus {
+  outline: none; /* Sin contorno al enfocar */
+  box-shadow: 0 0 0 3px rgba(255, 235, 59, 0.5); /* Sombra alrededor al enfocar */
+}
+
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ff6f61;
+  transition: color 0.3s ease;
+}
+
+.favorite-button:hover {
+  color: #ff4b3a;
+}
+
+.favorite-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 105, 97, 0.5);
+}
+
+/* src/styles.css */
+/* src/styles.css */
+
+.recipe-detail {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.recipe-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.recipe-detail .share-button {
+  display: block;
+  margin: 10px auto; /* Centra el botón y añade espacio arriba y abajo */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #e91e63; /* Color de fondo del botón de compartir */
+  color: white; /* Color del texto del botón de compartir */
+  font-size: 16px;
+}
+
+.recipe-detail .share-button:hover {
+  background-color: #c2185b; /* Color de fondo al pasar el ratón */
+}
+
+
+.recipe-detail .share-button:hover {
+  background-color: #00796b; /* Color de fondo al pasar el ratón */
+}
+
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #f3f3f3;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-section {
+  max-width: 200px;
+}
+
+.footer-section h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  color: #666;
+}
+
+/* Estilos para el formulario de búsqueda */
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.search-button {
+  background-color: #ffeb3b; /* Color de fondo amarillo */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  text-decoration: none; /* Sin subrayado */
+  color: #333; /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+  font-size: 16px; /* Tamaño de la fuente */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.search-button:hover {
+  background-color: #fdd835; /* Color de fondo amarillo más oscuro al pasar el cursor */
+}
+
+.search-button:focus {
+  outline: none; /* Sin contorno al enfocar */
+  box-shadow: 0 0 0 3px rgba(255, 235, 59, 0.5); /* Sombra alrededor al enfocar */
+}
+
+/* Estilos para el formulario de inicio de sesión y registro */
+.login-form-container, .register-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.login-form, .register-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 350px;
+  border-top: 5px solid #ffeb3b;
+}
+
+.login-form h2, .register-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-button, .register-button {
+  padding: 10px 20px;
+  background-color: #ffeb3b;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover, .register-button:hover {
+  background-color: #fbd3e9;
+}
+
+/* Otros estilos para el formulario de inicio de sesión y registro */
+.login-form-container a, .register-form-container a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+
+.login-form-container a:hover, .register-form-container a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el formulario de añadir receta */
+.add-recipe-form {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.add-recipe-form h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-recipe-form .form-group {
+  margin-bottom: 20px;
+}
+
+.add-recipe-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+.add-recipe-form .form-group input,
+.add-recipe-form .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+}
+
+.add-recipe-form .form-group textarea {
+  height: 150px;
+  resize: vertical; /* Permite redimensionar verticalmente el área de texto */
+}
+
+.add-recipe-form button {
+  background-color: #ffeb3b;
+  border: none;
+  padding: 12px 24px;
+  color: #333;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.add-recipe-form button:hover {
+  background-color: #fdd835;
+}
+
+/* Estilos para el contenedor de categorías */
+.categories {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Estilos para el título de categorías */
+.categories h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos para la lista de categorías */
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px; /* Espacio entre los botones */
+  margin-bottom: 20px;
+}
+
+/* Estilos para los botones de categorías */
+.category-list button {
+  background-color: #ffeb3b;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+.category-list button:hover {
+  background-color: #fdd835;
+  transform: translateY(-3px);
+}
+
+.category-list button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 235, 59, 0.5);
+}
+
+/* Estilos para la sección de recetas */
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las tarjetas de recetas */
+}
+
+/* Estilos para las tarjetas de recetas */
+.recipe {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.recipe h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.view-more-button {
+  background-color: #ffeb3b;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+  background-color: #fdd835;
+}
+
+/* Estilos para el detalle de la receta */
+.recipe-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la imagen de la receta */
+.recipe-detail img {
+  width: 0%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el título de la receta */
+.recipe-detail h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la categoría de la receta */
+.recipe-detail h2 {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la lista de ingredientes */
+.recipe-detail ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recipe-detail li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Estilos para las instrucciones de la receta */
+.recipe-detail p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los botones */
+.recipe-detail .back-button,
+.recipe-detail .favorites-button {
+  background-color: #ffeb3b;
+  border: none;
+  padding: 10px 20px;
+  color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Asegurarse de que no haya subrayado */
+}
+
+.recipe-detail .back-button:hover,
+.recipe-detail .favorites-button:hover {
+  background-color: #fdd835;
+}
+
+.recipe-detail .back-button:focus,
+.recipe-detail .favorites-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 235, 59, 0.5);
+}
+
+.recipe-detail .favorites-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-detail .favorites-button span {
+  margin-right: 8px;
+}
+
+.recipe-detail a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Añadir estilo al botón de volver */
+.recipe-detail .back-button {
+  background-color: #fbd3e9;
+}
+
+.recipe-detail .back-button:hover {
+  background-color: #f8a9b1;
+}
+
+/* Estilo para el botón de eliminar de favoritos */
+.delete-favorite-button {
+  background-color: #fbd3e9; /* Color de fondo rojo */
+  color: #000000; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+  font-size: 16px; /* Tamaño de la fuente */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  text-decoration: none; /* Asegurarse de que no haya subrayado */
+  display: flex; /* Para alinear icono y texto */
+  align-items: center; /* Centrar verticalmente icono y texto */
+  margin-top: 20px; /* Espacio superior aumentado para separar del botón "Ver Más" */
+}
+
+.delete-favorite-button:hover {
+  background-color: #fbd3e9; /* Color de fondo rojo más oscuro al pasar el cursor */
+}
+
+.delete-favorite-button:focus {
+  outline: none; /* Sin contorno al enfocar */
+  box-shadow: 0 0 0 3px rgba(230, 74, 69, 0.5); /* Sombra alrededor al enfocar */
+}
+
+.delete-favorite-button .icon {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+
+/* Añadir estilos para el componente AddedRecipes */
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.recipe {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  width: 200px;
+}
+
+.recipe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.recipe h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.view-more-button {
+  background-color: #ffeb3b;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+  background-color: #fdd835;
+}
+
+/* Estilos generales para la sección de calificación */
+.rating-section {
+  margin-top: 20px;
+  text-align: center; /* Centra el contenido de la sección de calificación */
+}
+
+.rating-section h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Estilos para las estrellas de calificación */
+.star-rating {
+  display: inline-flex; /* Cambiado a inline-flex para centrar las estrellas */
+  font-size: 24px;
+  color: #ccc; /* Color de las estrellas por defecto */
+}
+
+.star {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.star.filled {
+  color: #ffeb3b; /* Color de las estrellas llenas */
+}
+
+/* Estilos para la sección de comentarios */
+.comments-section {
+  margin-top: 20px;
+}
+
+.comments-section h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.comments-section textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+/* Estilos para el botón de comentarios */
+.comments-section button {
+  background-color:#fbd3e9; /* Igual que el botón de favoritos */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.comments-section button:hover {
+  background-color: #fbd3e9;
+}
+
+/* Estilos para la lista de comentarios */
+.comments-list {
+  margin-top: 10px;
+}
+
+.comments-list p {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los botones de navegación */
+.back-button, .favorites-button {
+  background-color: #fbd3e9;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.back-button:hover, .favorites-button:hover {
+  background-color: #fbd3e9;
+}
+
+/* Estilo específico para el botón de agregar a favoritos */
+.favorites-button {
+  display: flex;
+  align-items: center;
+}
+
+.favorites-button span {
+  margin-right: 5px;
+}
+
+/* styles.css */
+
+/* Estilos para el contenedor de detalles de la receta */
+.recipe-detail {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+/* Estilo de la imagen */
+.recipe-detail img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto 20px; /* Espacio abajo para los botones */
+  display: block; /* Asegura que la imagen esté centrada */
+}
+
+/* Estilos para los botones */
+.back-button, .favorites-button {
+  background-color: #e91e63; /* Rosa ajustado */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  position: absolute;
+  top: 20px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover, .favorites-button:hover {
+  background-color: #c2185b; /* Rosa más oscuro */
+}
+
+/* Posicionamiento de los botones */
+.back-button {
+  left: 20px; /* Posiciona el botón de volver en la esquina izquierda */
+}
+
+.favorites-button {
+  right: 20px; /* Posiciona el botón de favoritos en la esquina derecha */
+}
+
+/* Separación adicional para el botón de favoritos */
+.recipe-detail {
+  padding-right: 80px; /* Espacio adicional para el botón de favoritos */
+}
+
+/* Sección de calificación */
+.rating-section {
+  margin: 20px 0;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.star {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.star.filled {
+  color: #FFD700;
+}
+
+.rating-section button {
+  background-color: #e91e63; /* Rosa ajustado */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.rating-section button:hover {
+  background-color: #c2185b; /* Rosa más oscuro */
+}
+
+/* Sección de comentarios */
+.comments-section {
+  margin: 20px 0;
+}
+
+.comments-list {
+  margin-top: 10px;
+  text-align: left;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.comments-section button {
+  background-color: #e91e63; /* Rosa ajustado */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.comments-section button:hover {
+  background-color: #c2185b; /* Rosa más oscuro */
+}
+
+
+/* Navegación */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para la parte izquierda de la navegación */
+.nav-left ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-left ul li {
+  margin: 0 10px;
+}
+
+/* Estilos para la parte derecha de la navegación */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-right a {
+  color: #e91e63; /* Mantener el color actual */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-right a:hover {
+  text-decoration: underline;
+}
+
+
+/* src/styles.css */
+
+.user-profile {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Alinea verticalmente */
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile-details {
+  text-align: center; /* Centra el texto */
+}
+
+.profile-details input {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80%; /* Asegúrate de que los campos no sean demasiado grandes */
+}
+
+.profile-details button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-details button:first-of-type {
+  background-color: #fbd3e9; /* Color para "Guardar" */
+  color: black;
+}
+
+.profile-details button:last-of-type {
+  background-color: #fbd3e9; /* Color para "Cancelar" */
+  color: black;
+}
+
+.profile-details button:hover {
+  opacity: 0.9;
+}
+
+.user-recipes {
+  margin-top: 20px;
+  text-align: center; /* Centra el texto */
+}
+
+.user-recipes h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333; /* Color del encabezado */
+}
+
+.user-recipes ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-recipes li {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-recipes p {
+  color: #888;
+}
+
+
